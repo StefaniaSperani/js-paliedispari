@@ -8,17 +8,18 @@ const parolaInput = document.querySelector('input');
 const btnPali = document.getElementById('btn1');
 const result = document.getElementById('result');
 
-
-const parola = parolaInput.value;
-let parolaInversa = parola.split('').reverse().join('');
-// console.log(parolaInversa);
-
 // creo una funzione che mi dice se la parola inserita dall'utente è palindroma
 function parolaPali(){
+    //mi creo le variabili che serviranno a prendere ogni volta la parola inserita
+    const parola = parolaInput.value;
+    let parolaInversa = parola.split('').reverse().join('');
+// console.log(parolaInversa);
+
     if(parolaInversa === parola){
-        result.innerHTML = `Bravo, sei intelligente!`;
+        result.innerHTML = `<div class="text-white">Bravo, sei intelligente!</div>`;
+        // console.log(parola)
     }else{
-        result.innerHTML = `Ritenta!`
+        result.innerHTML = `<div class="text-white">Ritenta!</div>`;
     }
 }
 btnPali.addEventListener('click', parolaPali);
