@@ -6,14 +6,23 @@
 //creo le variabili che prendono gli elementi in pagina
 const parolaInput = document.querySelector('input');
 const btnPali = document.getElementById('btn1');
+const result = document.getElementById('result');
+
+
+const parola = parolaInput.value;
+let parolaInversa = parola.split('').reverse().join('');
+// console.log(parolaInversa);
 
 // creo una funzione che mi dice se la parola inserita dall'utente è palindroma
-btnPali.addEventListener('click', function(){
-    // creo una variabile che prenda la misura della parola
-    const parolaLen = parolaInput.value;
+function parolaPali(){
+    if(parolaInversa === parola){
+        result.innerHTML = `Bravo, sei intelligente!`;
+    }else{
+        result.innerHTML = `Ritenta!`
+    }
+}
+btnPali.addEventListener('click', parolaPali);
 
-
-})
 
 
 
