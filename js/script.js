@@ -11,7 +11,7 @@ const result = document.getElementById('result');
 // creo una funzione che mi dice se la parola inserita dall'utente è palindroma
 function parolaPali() {
     //mi creo le variabili che serviranno a prendere ogni volta la parola inserita
-    const parola = parolaInput.value;
+    const parola = parolaInput.value.toLowerCase().trim();
     let parolaInversa = parola.split('').reverse().join('');
     // console.log(parolaInversa);
 
